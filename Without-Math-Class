@@ -1,0 +1,43 @@
+
+import java.util.Scanner;
+public class NoMathClass {
+     public static void main(String[] args) {
+         Scanner keyboard = new Scanner(System.in);
+         System.out.println("Enter three numbers (delimited by spaces): ");
+         keyboard.useDelimiter(" ");
+       
+         double x, y, z, h, f, g;
+         x = keyboard.nextDouble();
+         y = keyboard.nextDouble();
+         z = keyboard.nextDouble();
+
+         h = x*x*x*x*x*x*x*x*x*x;
+         f = x + y;
+         g = sqrt(x) + absolute(y) + power(z,y);
+
+         System.out.println ("Your 1st number to the tenth power is " + h + "\nThe sum of your two first numbers is " + f + "\nThe square root of the 1st number plus the absolute value of the 2nd number plus the 3rd number to the power of the 2nd number is " + g);
+
+     }
+     public static double sqrt(double x) {
+         double t;
+         double squareRoot = x/2;
+          
+         do {
+             t = squareRoot;
+             squareRoot = (t + (x/t)) / 2;
+         }
+         while ((t - squareRoot) != 0);
+            return squareRoot;
+     }
+     public static double absolute(double y) {
+         return (y>=0)?y:(-1 * y);
+     }
+     public static double power(double z, double y) {
+         double total = z;
+         
+         for (double i=1; i<y; i++) {
+            total = total * (double) z;
+         }
+         return total;
+     }
+}
