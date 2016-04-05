@@ -1,0 +1,26 @@
+# Methods
+import java.util.Scanner;
+public class Methods {
+     public static void main(String[] args) {
+         System.out.println("Your number to the tenth power is " + h(input()));
+         System.out.println("Your 1st number plus your 2nd number is " + f(input(), input()));
+         System.out.println("The square root of your 1st number plus the absolute value of your second number plus your 3rd number to the power of your 2nd number is " + g(input(), input(), input()));
+     }
+     public static double h(double x) {
+         return Math.pow(x,10);
+     }
+     public static void output(double x) {
+         System.out.println(x);
+     }
+     public static double input() {
+         Scanner keyboard = new Scanner(System.in);
+         System.out.println("Enter a number: ");
+         return keyboard.nextDouble();
+     }
+     public static double f(double x, double y) {
+         return x + y;
+     }
+     public static double g(double x, double y, double z) {
+         return Math.sqrt(x) + Math.abs(y) + Math.pow(z, y);
+     }
+}
